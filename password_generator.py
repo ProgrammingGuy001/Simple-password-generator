@@ -1,7 +1,6 @@
 import streamlit as st
 import string
 import random
-backgroundColor = "#F0F0F0"
 count=0
 lowercase_alphabet = list(string.ascii_lowercase)
 uppercase_alphabets = list(string.ascii_uppercase)
@@ -12,8 +11,6 @@ st.title("Password Generator 🔐")
 st.subheader("Securing you everyday ❤️")
 n= st.slider("Enter the length of the password", 2, 100)
 col1, col2, col3 , col4 = st.columns(4)
-
-# Add checkboxes to each column
 with col1:
     if st.checkbox("Special characters"):
         list_of_option.append(special_characters)
