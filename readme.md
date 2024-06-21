@@ -13,6 +13,7 @@ Simple Password Generator is a straightforward web application built using Strea
 - **Customizable Password Length**: Users can specify the desired length of the generated password using a slider.
 - **Options for Character Types**: Users can include special characters, capital letters, small letters, and numbers in their generated password.
 - **User-Friendly Interface**: The interface is intuitive and easy to use, catering to users of all levels.
+- **future** this app will be meade into a desktop app
 
 ## Installation
 
