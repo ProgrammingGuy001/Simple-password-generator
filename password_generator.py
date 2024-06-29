@@ -20,6 +20,8 @@ def generate_password():
     else:
         password = "".join(random.choice(random.choice(list_of_option)) for _ in range(n))
         password_var.set(password.strip())
+        password_text.delete("1.0", tk.END)
+        password_text.insert(tk.END, password.strip())
 
 def copy_to_clipboard():
     root.clipboard_clear()
@@ -29,8 +31,8 @@ def copy_to_clipboard():
 # Lists of characters
 lowercase_alphabet = list(string.ascii_lowercase)
 uppercase_alphabets = list(string.ascii_uppercase)
-numbers = ["1","2","3","4","5","6","7","8","9"]
-special_characters = ["@","!","#","%","&","*",]
+numbers = list(string.digits)
+special_characters = list(string.punctuation)
 
 # Create the main window
 root = tk.Tk()
@@ -72,8 +74,8 @@ generate_button.pack(pady=10)
 
 # Display the generated password
 password_var = tk.StringVar()
-password_entry = tk.Entry(root, textvariable=password_var, font=("Helvetica", 12), state="readonly")
-password_entry.pack(pady=5)
+password_text = tk.Text(root, height=5, font=("Helvetica", 12), wrap=tk.WORD)
+password_text.pack(pady=5)
 
 # Button to copy the password
 copy_button = tk.Button(root, text="Copy to Clipboard", command=copy_to_clipboard)
